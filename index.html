@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Ultimate CSS3 Buttons</title>
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    
+    <style>
+    
+        .more, .more:visited { text-decoration: none; color: #4679bd; }
+        .more:hover { text-decoration: underline; }
+       
+        .more-container {
+            display: none;
+        }
+        
+        .clearfix:before, .clearfix:after { display: table; content: ""; zoom: 1; *display: inline; }
+        .clearfix:after { clear: both; }
+        .clearfix { zoom: 1; list-style-type: none; margin: 0; padding: 0; }
+        body { background: #f1f1f1; font-size: 13px; font-family: sans-serif; margin: 10px; -webkit-user-select: none; user-select: none;}
+        div:last-child { border-bottom: none; }
+        h1{ font-size: 40px; color: #ddd; font-weight: normal; text-shadow: 0 1px 5x rgba(0, 0, 0, .8); margin: 0; padding: 0; text-align: center; }
+        h2 { font-size: 32px; margin: 0 0 35px 0; color: #333; text-shadow: 1px 1px rgba(255, 255, 255, 1.0); }
+        div > a { margin-right: 10px; }
+        body{ margin: 0 auto; background: #333;}
+        .header { width: 980px; padding:30px 0; margin: 0 auto; }
+        .wrap { width: 980px; padding:30px 0; margin: 0 auto 20px auto; border-left: 1px solid white; border-right: 1px solid white; background: #f1f1f1; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .7); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .7); box-shadow: 0 0 20px rgba(0, 0, 0, .7); -webkit-border-radius: 5px; -moz-border-radius:5px; border-radius: 5px;}
+        .wrap > div { padding: 25px 0; border-bottom: 1px dotted #bdbdbd; border-top: 1px dotted #fff; margin: 0 40px;}
+        .wrap > div:first-child { border-top: none; }
+        .subgroup { margin-bottom: 25px; }
+        .subgroup .title { width: 150px; float:left;}
+        .subgroup .title h3 { font-size: 24px; color: #bbb; margin: 0; padding: 0; text-shadow: 0 1px 0 rgba(255, 255, 255, 1.0); text-align: right; font-weight: normal; }
+        .subgroup .content { width: 720px; float: right; padding-left: 30px;}
+        .subgroup .content .more-container > div, .subgroup .content > div { margin-bottom: 15px;}
+        input[type="text"], textarea { width: 97%; border: 1px solid #ccc; font-family: sans-serif; padding: 4px;color: #565656; -webkit-border-radius: 4px; border-radius: 4px; -moz-border-radius: 4px; }    
+        textarea { height: 100px; }
+        label { display: block; font-size: 12px;  margin-bottom: 6px;color: #565656; }
+        form { border: 1px solid #dedede; padding: 15px; display: inline-block; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: #f3f3f3; }
+        form > div { margin-bottom: 15px; }
+        form > div:last-child { margin-bottom: 0; }
+        
+        .twipsy{display:block;position:absolute;visibility:visible;padding:5px;font-size:12px;z-index:1000;filter:alpha(opacity=80);-khtml-opacity:0.8;-moz-opacity:0.8;opacity:0.8;} .twipsy.fade.in{filter:alpha(opacity=80);-khtml-opacity:0.8;-moz-opacity:0.8;opacity:0.8;} .twipsy.above .twipsy-arrow{bottom:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #000;} .twipsy.left .twipsy-arrow{top:50%;right:0;margin-top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:5px solid #000;} .twipsy.below .twipsy-arrow{top:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #000;} .twipsy.right .twipsy-arrow{top:50%;left:0;margin-top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:5px solid #000;} .twipsy-inner{padding:5px 8px;background-color:#000;color:#FFF;text-align:center;max-width:200px;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;} .twipsy-arrow{position:absolute;width:0;height:0;}
+        
+    
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-twipsy.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $(".more").click(function() {
+                $(this).parent().next(".more-container").slideToggle();
+            });
+            
+            $("a:not(a.more), input:not(input[type=text]), label").twipsy({ title: 'class', live: true, animate: false });
+        });
+        
+        
+    </script>
+    
+    
+<!--[if gte IE 9]>
+  <style type="text/css">
+    /*.button, .buttonbar a {
+       filter: none !important;
+    }*/
+  </style>
+<![endif]-->    
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" media="all" href="assets/css/ie8.css"/><![endif]-->
+        
+    <!--[if lte IE 7]>
+        <script src="js/IE8.js" type="text/javascript"></script><![endif]-->
+    <!--[if lt IE 7]>
+	<!--<link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
+</head>
+
+<body id="index" class="home">
+    <header class="header">
+        <h1>Ultimate CSS3 Buttons Library</h1>
+    </header>
+    <div class="wrap">
+    <div>
+        <h2>Icon Buttons</h2>
+
+        <div class="subgroup clearfix">
+            <div class="title"><h3>icon</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button">&nbsp;</a>
+                    <a class="icon button">Normal</a>
+                    <a class="icon pill button">Pill</a>
+                    <a class="icon pill round button">Pill + Round</a>
+                    <a class="icon pill round glossy button">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large">&nbsp;</a>
+                        <a class="icon button large">Normal</a>
+                        <a class="icon pill button large">Pill</a>
+                        <a class="icon pill round button large">Pill + Round</a>
+                        <a class="icon pill round glossy button after large">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge">&nbsp;</a>
+                        <a class="icon button huge">Normal</a>
+                        <a class="icon pill round button huge">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>plus</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button plus">&nbsp;</a>
+                    <a class="icon button plus">Normal</a>
+                    <a class="icon pill button plus">Pill</a>
+                    <a class="icon pill round button plus">Pill + Round</a>
+                    <a class="icon pill round glossy button plus">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after plus">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large plus">&nbsp;</a>
+                        <a class="icon button large plus">Normal</a>
+                        <a class="icon pill button large plus">Pill</a>
+                        <a class="icon pill round button large plus">Pill + Round</a>
+                        <a class="icon pill round glossy button after large plus">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge plus">&nbsp;</a>
+                        <a class="icon button huge plus">Normal</a>
+                        <a class="icon pill round button huge plus">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge plus">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>cross</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button cross">&nbsp;</a>
+                    <a class="icon button cross">Normal</a>
+                    <a class="icon pill button cross">Pill</a>
+                    <a class="icon pill round button cross">Pill + Round</a>
+                    <a class="icon pill round glossy button cross">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after cross">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large cross">&nbsp;</a>
+                        <a class="icon button large cross">Normal</a>
+                        <a class="icon pill button large cross">Pill</a>
+                        <a class="icon pill round button large cross">Pill + Round</a>
+                        <a class="icon pill round glossy button after large cross">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge cross">&nbsp;</a>
+                        <a class="icon button huge cross">Normal</a>
+                        <a class="icon pill round button huge cross">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge cross">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>balloon</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button balloon">&nbsp;</a>
+                    <a class="icon button balloon">Normal</a>
+                    <a class="icon pill button balloon">Pill</a>
+                    <a class="icon pill round button balloon">Pill + Round</a>
+                    <a class="icon pill round glossy button balloon">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after balloon">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large balloon">&nbsp;</a>
+                        <a class="icon button large balloon">Normal</a>
+                        <a class="icon pill button large balloon">Pill</a>
+                        <a class="icon pill round button large balloon">Pill + Round</a>
+                        <a class="icon pill round glossy button after large balloon">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge balloon">&nbsp;</a>
+                        <a class="icon button huge balloon">Normal</a>
+                        <a class="icon pill round button huge balloon">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge balloon">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subgroup clearfix">
+            <div class="title"><h3>info</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button info">&nbsp;</a>
+                    <a class="icon button info">Normal</a>
+                    <a class="icon pill button info">Pill</a>
+                    <a class="icon pill round button info">Pill + Round</a>
+                    <a class="icon pill round glossy button info">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after info">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large info">&nbsp;</a>
+                        <a class="icon button large info">Normal</a>
+                        <a class="icon pill button large info">Pill</a>
+                        <a class="icon pill round button large info">Pill + Round</a>
+                        <a class="icon pill round glossy button after large info">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge info">&nbsp;</a>
+                        <a class="icon button huge info">Normal</a>
+                        <a class="icon pill round button huge info">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge info">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>question</h3></div>
+            <div class="content">
+                <div>
+                    <a class="icon-only button question">&nbsp;</a>
+                    <a class="icon button question">Normal</a>
+                    <a class="icon pill button question">Pill</a>
+                    <a class="icon pill round button question">Pill + Round</a>
+                    <a class="icon pill round glossy button question">Pill + Glossy</a>
+                    <a class="icon pill round glossy button after question">Pill + After</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                <div class="more-container">
+                    <div>
+                        <a class="icon-only button large question">&nbsp;</a>
+                        <a class="icon button large question">Normal</a>
+                        <a class="icon pill button large question">Pill</a>
+                        <a class="icon pill round button large question">Pill + Round</a>
+                        <a class="icon pill round glossy button after large question">Pill + After</a>
+                    </div>
+                    
+                    <div>
+                        <a class="icon-only button huge question">&nbsp;</a>
+                        <a class="icon button huge question">Normal</a>
+                        <a class="icon pill round button huge question">Pill + Round</a>
+                        <a class="icon pill round glossy button after huge question">Pill + After</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+       
+    </div>
+    
+    <div>
+        <h2>Button Colors</h2>        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>normal</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button">Normal Button</a>
+                    <a class="button pill">Pill Button</a>
+                    <a class="button glossy">Glossy Button</a>
+                    <a class="button pill glossy">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">
+                    <div>
+                        <a class="button mini">Mini Button</a>
+                        <a class="button">Normal Button</a>
+                        <a class="button large">Large Button</a>
+                        <a class="button huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button mini pill">Mini Button</a>
+                        <a class="button pill">Normal Button</a>
+                        <a class="button large pill">Large Button</a>
+                        <a class="button huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button mini glossy">Mini Button</a>
+                        <a class="button glossy">Normal Button</a>
+                        <a class="button large glossy">Large Button</a>
+                        <a class="button huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button mini pill glossy">Mini Button</a>
+                        <a class="button pill glossy">Normal Button</a>
+                        <a class="button large pill glossy">Large Button</a>
+                        <a class="button huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>blue</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button blue">Normal Button</a>
+                    <a class="button pill blue">Pill Button</a>
+                    <a class="button glossy blue">Glossy Button</a>
+                    <a class="button pill glossy blue">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button blue mini">Mini Button</a>
+                        <a class="button blue">Normal Button</a>
+                        <a class="button blue large">Large Button</a>
+                        <a class="button blue huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button blue mini pill">Mini Button</a>
+                        <a class="button blue pill">Normal Button</a>
+                        <a class="button blue large pill">Large Button</a>
+                        <a class="button blue huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button blue mini glossy">Mini Button</a>
+                        <a class="button blue glossy">Normal Button</a>
+                        <a class="button blue large glossy">Large Button</a>
+                        <a class="button blue huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button blue mini pill glossy">Mini Button</a>
+                        <a class="button blue pill glossy">Normal Button</a>
+                        <a class="button blue large pill glossy">Large Button</a>
+                        <a class="button blue huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subgroup clearfix">            
+            <div class="title"><h3>green</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button green">Normal Button</a>
+                    <a class="button pill green">Pill Button</a>
+                    <a class="button glossy green">Glossy Button</a>
+                    <a class="button pill glossy green">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button green mini">Mini Button</a>
+                        <a class="button green">Normal Button</a>
+                        <a class="button green large">Large Button</a>
+                        <a class="button green huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button green mini pill">Mini Button</a>
+                        <a class="button green pill">Normal Button</a>
+                        <a class="button green large pill">Large Button</a>
+                        <a class="button green huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button green mini glossy">Mini Button</a>
+                        <a class="button green glossy">Normal Button</a>
+                        <a class="button green large glossy">Large Button</a>
+                        <a class="button green huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button green mini pill glossy">Mini Button</a>
+                        <a class="button green pill glossy">Normal Button</a>
+                        <a class="button green large pill glossy">Large Button</a>
+                        <a class="button green huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subgroup clearfix">
+            <div class="title"><h3>orange</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button orange">Normal Button</a>
+                    <a class="button pill orange">Pill Button</a>
+                    <a class="button glossy orange">Glossy Button</a>
+                    <a class="button pill glossy orange">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button orange mini">Mini Button</a>
+                        <a class="button orange">Normal Button</a>
+                        <a class="button orange large">Large Button</a>
+                        <a class="button orange huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button orange mini pill">Mini Button</a>
+                        <a class="button orange pill">Normal Button</a>
+                        <a class="button orange large pill">Large Button</a>
+                        <a class="button orange huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button orange mini glossy">Mini Button</a>
+                        <a class="button orange glossy">Normal Button</a>
+                        <a class="button orange large glossy">Large Button</a>
+                        <a class="button orange huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button orange mini pill glossy">Mini Button</a>
+                        <a class="button orange pill glossy">Normal Button</a>
+                        <a class="button orange large pill glossy">Large Button</a>
+                        <a class="button orange huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subgroup clearfix">
+            <div class="title"><h3>red</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button red">Normal Button</a>
+                    <a class="button pill red">Pill Button</a>
+                    <a class="button glossy red">Glossy Button</a>
+                    <a class="button pill glossy red">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button red mini">Mini Button</a>
+                        <a class="button red">Normal Button</a>
+                        <a class="button red large">Large Button</a>
+                        <a class="button red huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button red mini pill">Mini Button</a>
+                        <a class="button red pill">Normal Button</a>
+                        <a class="button red large pill">Large Button</a>
+                        <a class="button red huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button red mini glossy">Mini Button</a>
+                        <a class="button red glossy">Normal Button</a>
+                        <a class="button red large glossy">Large Button</a>
+                        <a class="button red huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button red mini pill glossy">Mini Button</a>
+                        <a class="button red pill glossy">Normal Button</a>
+                        <a class="button red large pill glossy">Large Button</a>
+                        <a class="button red huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subgroup clearfix">
+            <div class="title"><h3>black</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button black">Normal Button</a>
+                    <a class="button pill black">Pill Button</a>
+                    <a class="button glossy black">Glossy Button</a>
+                    <a class="button pill glossy black">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button black mini">Mini Button</a>
+                        <a class="button black">Normal Button</a>
+                        <a class="button black large">Large Button</a>
+                        <a class="button black huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button black mini pill">Mini Button</a>
+                        <a class="button black pill">Normal Button</a>
+                        <a class="button black large pill">Large Button</a>
+                        <a class="button black huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button black mini glossy">Mini Button</a>
+                        <a class="button black glossy">Normal Button</a>
+                        <a class="button black large glossy">Large Button</a>
+                        <a class="button black huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button black mini pill glossy">Mini Button</a>
+                        <a class="button black pill glossy">Normal Button</a>
+                        <a class="button black large pill glossy">Large Button</a>
+                        <a class="button black huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+               
+               
+        <div class="subgroup clearfix">
+            <div class="title"><h3>alt-blue</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button alt-blue">Normal Button</a>
+                    <a class="button pill alt-blue">Pill Button</a>
+                    <a class="button glossy alt-blue">Glossy Button</a>
+                    <a class="button pill glossy alt-blue">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button alt-blue mini">Mini Button</a>
+                        <a class="button alt-blue">Normal Button</a>
+                        <a class="button alt-blue large">Large Button</a>
+                        <a class="button alt-blue huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button alt-blue mini pill">Mini Button</a>
+                        <a class="button alt-blue pill">Normal Button</a>
+                        <a class="button alt-blue large pill">Large Button</a>
+                        <a class="button alt-blue huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button alt-blue mini glossy">Mini Button</a>
+                        <a class="button alt-blue glossy">Normal Button</a>
+                        <a class="button alt-blue large glossy">Large Button</a>
+                        <a class="button alt-blue huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button alt-blue mini pill glossy">Mini Button</a>
+                        <a class="button alt-blue pill glossy">Normal Button</a>
+                        <a class="button alt-blue large pill glossy">Large Button</a>
+                        <a class="button alt-blue huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>lightblue</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button lightblue">Normal Button</a>
+                    <a class="button pill lightblue">Pill Button</a>
+                    <a class="button glossy lightblue">Glossy Button</a>
+                    <a class="button pill glossy lightblue">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button lightblue mini">Mini Button</a>
+                        <a class="button lightblue">Normal Button</a>
+                        <a class="button lightblue large">Large Button</a>
+                        <a class="button lightblue huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button lightblue mini pill">Mini Button</a>
+                        <a class="button lightblue pill">Normal Button</a>
+                        <a class="button lightblue large pill">Large Button</a>
+                        <a class="button lightblue huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button lightblue mini glossy">Mini Button</a>
+                        <a class="button lightblue glossy">Normal Button</a>
+                        <a class="button lightblue large glossy">Large Button</a>
+                        <a class="button lightblue huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button lightblue mini pill glossy">Mini Button</a>
+                        <a class="button lightblue pill glossy">Normal Button</a>
+                        <a class="button lightblue large pill glossy">Large Button</a>
+                        <a class="button lightblue huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>darkblue</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button darkblue">Normal Button</a>
+                    <a class="button pill darkblue">Pill Button</a>
+                    <a class="button glossy darkblue">Glossy Button</a>
+                    <a class="button pill glossy darkblue">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button darkblue mini">Mini Button</a>
+                        <a class="button darkblue">Normal Button</a>
+                        <a class="button darkblue large">Large Button</a>
+                        <a class="button darkblue huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button darkblue mini pill">Mini Button</a>
+                        <a class="button darkblue pill">Normal Button</a>
+                        <a class="button darkblue large pill">Large Button</a>
+                        <a class="button darkblue huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button darkblue mini glossy">Mini Button</a>
+                        <a class="button darkblue glossy">Normal Button</a>
+                        <a class="button darkblue large glossy">Large Button</a>
+                        <a class="button darkblue huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button darkblue mini pill glossy">Mini Button</a>
+                        <a class="button darkblue pill glossy">Normal Button</a>
+                        <a class="button darkblue large pill glossy">Large Button</a>
+                        <a class="button darkblue huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>alt-green</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button alt-green">Normal Button</a>
+                    <a class="button pill alt-green">Pill Button</a>
+                    <a class="button glossy alt-green">Glossy Button</a>
+                    <a class="button pill glossy alt-green">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button alt-green mini">Mini Button</a>
+                        <a class="button alt-green">Normal Button</a>
+                        <a class="button alt-green large">Large Button</a>
+                        <a class="button alt-green huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button alt-green mini pill">Mini Button</a>
+                        <a class="button alt-green pill">Normal Button</a>
+                        <a class="button alt-green large pill">Large Button</a>
+                        <a class="button alt-green huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button alt-green mini glossy">Mini Button</a>
+                        <a class="button alt-green glossy">Normal Button</a>
+                        <a class="button alt-green large glossy">Large Button</a>
+                        <a class="button alt-green huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button alt-green mini pill glossy">Mini Button</a>
+                        <a class="button alt-green pill glossy">Normal Button</a>
+                        <a class="button alt-green large pill glossy">Large Button</a>
+                        <a class="button alt-green huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>lightgreen</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button lightgreen">Normal Button</a>
+                    <a class="button pill lightgreen">Pill Button</a>
+                    <a class="button glossy lightgreen">Glossy Button</a>
+                    <a class="button pill glossy lightgreen">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button lightgreen mini">Mini Button</a>
+                        <a class="button lightgreen">Normal Button</a>
+                        <a class="button lightgreen large">Large Button</a>
+                        <a class="button lightgreen huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button lightgreen mini pill">Mini Button</a>
+                        <a class="button lightgreen pill">Normal Button</a>
+                        <a class="button lightgreen large pill">Large Button</a>
+                        <a class="button lightgreen huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button lightgreen mini glossy">Mini Button</a>
+                        <a class="button lightgreen glossy">Normal Button</a>
+                        <a class="button lightgreen large glossy">Large Button</a>
+                        <a class="button lightgreen huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button lightgreen mini pill glossy">Mini Button</a>
+                        <a class="button lightgreen pill glossy">Normal Button</a>
+                        <a class="button lightgreen large pill glossy">Large Button</a>
+                        <a class="button lightgreen huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>darkgreen</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button darkgreen">Normal Button</a>
+                    <a class="button pill darkgreen">Pill Button</a>
+                    <a class="button glossy darkgreen">Glossy Button</a>
+                    <a class="button pill glossy darkgreen">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button darkgreen mini">Mini Button</a>
+                        <a class="button darkgreen">Normal Button</a>
+                        <a class="button darkgreen large">Large Button</a>
+                        <a class="button darkgreen huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button darkgreen mini pill">Mini Button</a>
+                        <a class="button darkgreen pill">Normal Button</a>
+                        <a class="button darkgreen large pill">Large Button</a>
+                        <a class="button darkgreen huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button darkgreen mini glossy">Mini Button</a>
+                        <a class="button darkgreen glossy">Normal Button</a>
+                        <a class="button darkgreen large glossy">Large Button</a>
+                        <a class="button darkgreen huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button darkgreen mini pill glossy">Mini Button</a>
+                        <a class="button darkgreen pill glossy">Normal Button</a>
+                        <a class="button darkgreen large pill glossy">Large Button</a>
+                        <a class="button darkgreen huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>alt-red</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button alt-red">Normal Button</a>
+                    <a class="button pill alt-red">Pill Button</a>
+                    <a class="button glossy alt-red">Glossy Button</a>
+                    <a class="button pill glossy alt-red">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button alt-red mini">Mini Button</a>
+                        <a class="button alt-red">Normal Button</a>
+                        <a class="button alt-red large">Large Button</a>
+                        <a class="button alt-red huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button alt-red mini pill">Mini Button</a>
+                        <a class="button alt-red pill">Normal Button</a>
+                        <a class="button alt-red large pill">Large Button</a>
+                        <a class="button alt-red huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button alt-red mini glossy">Mini Button</a>
+                        <a class="button alt-red glossy">Normal Button</a>
+                        <a class="button alt-red large glossy">Large Button</a>
+                        <a class="button alt-red huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button alt-red mini pill glossy">Mini Button</a>
+                        <a class="button alt-red pill glossy">Normal Button</a>
+                        <a class="button alt-red large pill glossy">Large Button</a>
+                        <a class="button alt-red huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>
+        
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>lightred</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button lightred">Normal Button</a>
+                    <a class="button pill lightred">Pill Button</a>
+                    <a class="button glossy lightred">Glossy Button</a>
+                    <a class="button pill glossy lightred">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button lightred mini">Mini Button</a>
+                        <a class="button lightred">Normal Button</a>
+                        <a class="button lightred large">Large Button</a>
+                        <a class="button lightred huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button lightred mini pill">Mini Button</a>
+                        <a class="button lightred pill">Normal Button</a>
+                        <a class="button lightred large pill">Large Button</a>
+                        <a class="button lightred huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button lightred mini glossy">Mini Button</a>
+                        <a class="button lightred glossy">Normal Button</a>
+                        <a class="button lightred large glossy">Large Button</a>
+                        <a class="button lightred huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button lightred mini pill glossy">Mini Button</a>
+                        <a class="button lightred pill glossy">Normal Button</a>
+                        <a class="button lightred large pill glossy">Large Button</a>
+                        <a class="button lightred huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>        
+               
+               
+               
+        <div class="subgroup clearfix">
+            <div class="title"><h3>yellow</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button yellow">Normal Button</a>
+                    <a class="button pill yellow">Pill Button</a>
+                    <a class="button glossy yellow">Glossy Button</a>
+                    <a class="button pill glossy yellow">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button yellow mini">Mini Button</a>
+                        <a class="button yellow">Normal Button</a>
+                        <a class="button yellow large">Large Button</a>
+                        <a class="button yellow huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button yellow mini pill">Mini Button</a>
+                        <a class="button yellow pill">Normal Button</a>
+                        <a class="button yellow large pill">Large Button</a>
+                        <a class="button yellow huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button yellow mini glossy">Mini Button</a>
+                        <a class="button yellow glossy">Normal Button</a>
+                        <a class="button yellow large glossy">Large Button</a>
+                        <a class="button yellow huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button yellow mini pill glossy">Mini Button</a>
+                        <a class="button yellow pill glossy">Normal Button</a>
+                        <a class="button yellow large pill glossy">Large Button</a>
+                        <a class="button yellow huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>        
+
+
+               
+        <div class="subgroup clearfix">
+            <div class="title"><h3>alt-orange</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button alt-orange">Normal Button</a>
+                    <a class="button pill alt-orange">Pill Button</a>
+                    <a class="button glossy alt-orange">Glossy Button</a>
+                    <a class="button pill glossy alt-orange">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button alt-orange mini">Mini Button</a>
+                        <a class="button alt-orange">Normal Button</a>
+                        <a class="button alt-orange large">Large Button</a>
+                        <a class="button alt-orange huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button alt-orange mini pill">Mini Button</a>
+                        <a class="button alt-orange pill">Normal Button</a>
+                        <a class="button alt-orange large pill">Large Button</a>
+                        <a class="button alt-orange huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button alt-orange mini glossy">Mini Button</a>
+                        <a class="button alt-orange glossy">Normal Button</a>
+                        <a class="button alt-orange large glossy">Large Button</a>
+                        <a class="button alt-orange huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button alt-orange mini pill glossy">Mini Button</a>
+                        <a class="button alt-orange pill glossy">Normal Button</a>
+                        <a class="button alt-orange large pill glossy">Large Button</a>
+                        <a class="button alt-orange huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>        
+
+
+
+        <div class="subgroup clearfix">
+            <div class="title"><h3>brown</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button brown">Normal Button</a>
+                    <a class="button pill brown">Pill Button</a>
+                    <a class="button glossy brown">Glossy Button</a>
+                    <a class="button pill glossy brown">Glossy+Pill Button</a>
+                    <a href="#" class="more">more</a>
+                </div>
+                
+                <div class="more-container">                
+                    <div>
+                        <a class="button brown mini">Mini Button</a>
+                        <a class="button brown">Normal Button</a>
+                        <a class="button brown large">Large Button</a>
+                        <a class="button brown huge">Huge Button</a>
+                    </div>
+                    
+                    <div>
+                        <a class="button brown mini pill">Mini Button</a>
+                        <a class="button brown pill">Normal Button</a>
+                        <a class="button brown large pill">Large Button</a>
+                        <a class="button brown huge pill">Huge Button</a>
+                    </div>
+    
+                    <div>
+                        <a class="button brown mini glossy">Mini Button</a>
+                        <a class="button brown glossy">Normal Button</a>
+                        <a class="button brown large glossy">Large Button</a>
+                        <a class="button brown huge glossy">Huge Button</a>
+                    </div>
+    
+                    <div>                
+                        <a class="button brown mini pill glossy">Mini Button</a>
+                        <a class="button brown pill glossy">Normal Button</a>
+                        <a class="button brown large pill glossy">Large Button</a>
+                        <a class="button brown huge pill glossy">Huge Button</a>
+                    </div>
+                </div>
+            </div>               
+        </div>        
+
+
+
+               
+               
+               
+               
+               
+               
+               
+               
+               
+    </div>
+    
+    <div>
+        <h2>Button Bar</h2>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>radio</h3></div>
+            <div class="content">
+                <div>
+                    <ul class="buttonbar">
+                        <li>
+                            <ul class="group">
+                                <li><a class="start" href="#">Cut</a></li>
+                                <li><a href="#">Copy</a></li>
+                                <li><a class="end" href="#">Paste</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="subgroup clearfix">
+            <div class="title"><h3>inline</h3></div>
+            <div class="content">
+                <div>
+                    <ul class="buttonbar">
+                        <li>                    
+                            <ul class="togglegroup">            
+                                <li><a class="start" href="#">Checkbox 1</a></li>
+                                <li><a href="#">Checkbox 2</a></li>
+                                <li><a class="end" href="#">Checkbox 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="subgroup clearfix">
+            <div class="title"><h3>multiple</h3></div>
+            <div class="content">
+                <div>                    
+                    <ul class="buttonbar">
+                        <li>
+                            <ul class="group">
+                                <li><a class="start icon round cross" href="#">Cut<span class="note float">3</span></a></li>
+                                <li><a href="#" class="icon plus round">Copy</a></li>
+                                <li><a class="end icon after round" href="#">Paste</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="togglegroup">
+                                <li><a class="start" href="#"><strong>B</strong></a></li>
+                                <li><a href="#"><em>I</em></a></li>
+                                <li><a class="end" href="#" style="text-decoration:underline">U</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <ul class="togglegroup">            
+                                <li><a class="start icon-only" href="#"></a></li>
+                                <li><a class="icon-only cross" href="#"></a></li>
+                                <li><a class="icon-only end plus" href="#"></a></li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li><a class="spacer start active" href="#">On</a></li>
+                        <li><a class="end" href="#">Off</a></li>
+                        
+                        <li><a class="spacer end dropdown" href="#">test<span class="note">3</span></a></li>
+                    </ul>                   
+                </div>
+            </div>
+        </div> 
+    </div>
+                
+    <div>
+        <h2>Notifications</h2>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>inline</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button mini" href="#">Inline<span class="note">3</span></a>
+                    <a class="button" href="#">Inline<span class="note">3</span></a>
+                    <a class="button large" href="#">Inline<span class="note">3</span></a>
+                    <a class="button huge" href="#">Inline<span class="note">3</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>float</h3></div>
+            <div class="content">
+                <div>
+                    <a class="button mini" href="#">Float<span class="note float">3</span></a>
+                    <a class="button" href="#">Float<span class="note float">3</span></a>
+                    <a class="button large" href="#">Float<span class="note float">3</span></a>
+                    <a class="button huge" href="#">Float<span class="note float">3</span></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div>
+        <h2>Form Elements</h2>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>button</h3></div>
+            <div class="content">
+                <div>
+                    <input type="submit" class="button green" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>radio</h3></div>
+            <div class="content">
+                <div>
+                    <ul class="buttonbar">
+                        <li><input type="radio" id="radio1" value="Option 1" name="test" /><label for="radio1" class="start button">Radio 1</label></li>
+                        <li><input type="radio" id="radio2" value="Option 1" name="test" /><label for="radio2" class="button">Radio 2</label></li>
+                        <li><input type="radio" id="radio3" value="Option 1" name="test" /><label for="radio3" class="end button">Radio 3</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>checkbox</h3></div>
+            <div class="content">
+                <div>
+                    <ul class="buttonbar">
+                        <li><input type="checkbox" id="check1" value="Option 1" name="test" /><label for="check1" class="start button">Checkbox 1</label></li>
+                        <li><input type="checkbox" id="check2" value="Option 1" name="test" /><label for="check2" class="button">Checkbox 2</label></li>
+                        <li><input type="checkbox" id="check3" value="Option 1" name="test" /><label for="check3" class="end button">Checkbox 3</label></li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>        
+            
+        <div class="subgroup clearfix">
+            <div class="title"><h3>sample form</h3></div>
+            <div class="content">
+                <form>
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Type of Inquiry</label>
+                        <ul class="buttonbar">
+                            <li><input type="radio" id="radio4" value="Option 1" name="test" checked="checked" /><label for="radio4" class="start button">General</label></li>
+                            <li><input type="radio" id="radio5" value="Option 1" name="test" /><label for="radio5" class="button">Sales</label></li>
+                            <li><input type="radio" id="radio6" value="Option 1" name="test" /><label for="radio6" class="end button">Technical Support</label></li>
+                        </ul>
+                    </div>                    
+                    <div>
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>            
+                    <div>
+                        <span><input type="submit" class="button blue round glossy pill" value="Submit" /></span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        
+        
+        <div class="subgroup clearfix">
+            <div class="title"><h3>test area</h3></div>
+            <div class="content">
+            	<a href="#" class="button icon-only pill">&nbsp;</a>
+            	<a href="#" class="button icon-only large pill">&nbsp;</a>
+            	<a href="#" class="button icon-only huge pill">&nbsp;</a>
+            
+                <a href="#" class="icon button white">white</a>
+
+
+                           
+                <div>           
+                    <a href="#" class="button icon large">test icon</a>
+                    <a href="#" class="button icon huge">test icon</a>
+    
+                    <a href="#" class="button after icon large">test icon</a>
+                    <a href="#" class="button after icon huge">test icon</a>
+                </div>
+                
+                <div>           
+                    <a href="#" class="button icon large round">test icon</a>
+                    <a href="#" class="button icon huge round">test icon</a>
+    
+                    <a href="#" class="button after icon large round">test icon</a>
+                    <a href="#" class="button after icon huge round">test icon</a>
+                </div>
+                
+                <div>           
+                    <a href="#" class="button icon large round pill">test icon</a>
+                    <a href="#" class="button icon huge round pill">test icon</a>
+    
+                    <a href="#" class="button after icon large round pill">test icon</a>
+                    <a href="#" class="button after icon huge round pill">test icon</a>
+                </div>
+                
+                
+                <a href="#" class="button after huge icon action round pill">Download Now<span class="sub">Mac OSX / 11.8 MB</span></a>
+                <a href="#" class="button after large icon action round pill">Download Now<span class="sub">Mac OSX / 11.8 MB</span></a>
+                <a href="#" class="button large icon action">Download Now<span class="sub">Mac OSX / 11.8 MB</span></a>
+                
+            </div>
+        </div>
+                
+        
+        
+           
+
+        
+    </div>
+    </div><!-- end .wrap -->
+    
+</body>
+</html>
